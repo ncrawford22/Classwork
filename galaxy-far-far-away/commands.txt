@@ -10,13 +10,37 @@ Part 2:
 
 Part 3:
 
-1. cd .., cd death_star, cp storm_trooper.txt ~/Documents/PerScholas/Classwork/galaxy-far-far-away/tatooine
+5. cd .., cd death_star, cp storm_trooper.txt ../tatooine/
+
 
 Part 4:
 
-1. cd .., cd tatooine, mv luke.txt ~/Documents/PerScholas/Classwork/galaxy-far-far-away/tatooine/millenium_falcon/
- 
+6. cd .., cd tatooine, mv luke.txt millenium_falcon/, mv obi_wan.txt millenium_falcon/
+7. cd tatooine, mv millenium_falcon/ ..
+8. cd .., mv millenium_falcon/ death_star/
+9. cd death_star,  mv princess_leia.txt millenium_falcon/
 
+Part 5:
+10. cd millenium_falcon, rm obi_wan.txt
 
+Part 6:
 
+11. cd ../.., mkdir yavin_4
+12. cd death_star, mv millenium_falcon/ ../yavin_4/
+13. cd .., cd yavin_4, mkdir x_wing
+14. cd millenium_falcon, mv princess_leia.txt .., mv luke.txt ../x_wing/
+15. cd .., mv millenium_falcon ../, mv x_wing ../
+16. cd .., cd death_star, mkdir tie_fighter_1 tie_fighter_2 tie_fighter_3
+17. mv darth_vader.txt tie_fighter_1/
+18. cp storm_trooper.txt tie_fighter_2/, cp storm_trooper.txt tie_fighter_3/
+19. mv tie_fighter_1 ../, mv tie_fighter_2 ../, mv tie_fighter_3 ../
 
+Part 7:
+
+20. cd .., rm -r tie_fighter_2, rm -r tie_fighter_3
+
+Part 8: 
+
+21. cd x_wing, touch the_force.txt
+22. cd .., rm -r death_star
+23. mv x_wing yavin_4/, mv millenium_falcon/ yavin_4/
