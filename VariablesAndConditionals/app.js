@@ -208,16 +208,60 @@
 //     console.log('F');
 // }
 
-let number = 3;
+// Switch Statement
 
-switch (number) {
-    case 1:
-        console.log('inside of case 1');
+// let number = 4;
+
+// switch (number) {
+//     case 1:
+//         console.log('inside of case 1');
+//         break;
+//     case 2: 
+//         console.log('inside of case 2');
+//         break;
+//     case 3:
+//         console.log('inside of case 3');
+//         break;
+//     default:
+//         console.log('Do something else!');
+//         break;
+// }
+
+// Ternary Operator (Three parts)
+
+// let lighting = 'cloudy';
+
+// let dayOrNight = lighting === 'dark' ? 'night time' : lighting === 'cloudy' ? 'overcast' :'day time'; // 'night time'
+
+// console.log(dayOrNight);
+
+// let lighting = "light";
+// let dayOrNight;
+
+// if (lighting === 'dark') {
+//     dayOrNight = 'night time';
+// } else if (lighting === 'cloudy') {
+//     dayOrNight = 'overcast';
+// } else {
+//     dayOrNight = 'day time';
+// }
+
+//Switch Statement Exercise
+
+let letter = "A";
+
+switch (letter) {
+    case "A", "E", "I", "O", "U", "Y" :
+        console.log ("This is a vowel!");
         break;
-    case 2: 
-        console.log('inside of case 2');
-        break;
-    case 3:
-        console.log('inside of case 3');
+    default:
+        console.log('This a consonant!');
         break;
 }
+
+// Ternary Operator Exercise
+
+let num = -1;
+
+let result1 = num > 0 ? 'Positive': num < 0 ? 'Negative': 'neither positive or negetive'
+console.log(result1);
