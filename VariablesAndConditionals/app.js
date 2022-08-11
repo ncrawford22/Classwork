@@ -248,7 +248,7 @@
 
 //Switch Statement Exercise
 
-let letter = "A";
+let letter = "X";
 
 switch (letter) {
     case "A", "E", "I", "O", "U", "Y" :
