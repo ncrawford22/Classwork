@@ -83,9 +83,34 @@
 //While Loops Exercise
 
 //Exercise 1
+
+// let i = 0;
+// while ( i < 35) {
+//     if (i % 3 === 0){
+//     console.log(i);
+//     }
+//     i++;
+// }
+
+//Exercise 2
+
+// let i = 0;
+// while (i < 100) {
+//     if (i % 5 === 0) {
+//         console.log(i);
+//     }
+//     i++;
+// }
+
+//Exercise 3
+
 let i = 0;
-while ( i < 35) {
-    if (i % 3 === 0)
-    console.log(i);
+while (i <= 20) {
+    if (i % 2 === 0) {
+        console.log(i * 3);
+    }
     i ++;
 }
+
+//Exercise 4
+
