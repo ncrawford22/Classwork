@@ -92,6 +92,12 @@
 //     i++;
 // }
 
+// let i = 0;
+// while (i < 35) {
+//     console.log(i)
+//     i = i + 3;
+// }
+
 //Exercise 2
 
 // let i = 0;
@@ -102,15 +108,80 @@
 //     i++;
 // }
 
+// let i = 5;
+// while (i  < 100) {
+//     console.log(i);
+//     i = i + 5;
+// }
+
 //Exercise 3
 
-let i = 0;
-while (i <= 20) {
-    if (i % 2 === 0) {
-        console.log(i * 3);
-    }
-    i ++;
-}
+// let i = 0;
+// while (i <= 20) {
+//     if (i % 2 == 0) {
+//         console.log(i * 3);
+//     }
+//     i ++;
+// }
+
+// let i = 0;
+// while (i < 20) {
+//     if (i % 2 == 0) {
+//         i = i *3;
+//         console.log(i);
+//     }
+// }
 
 //Exercise 4
 
+// let num = 2;
+// let prime = 0;
+// let num2 = 0;
+// while (num <= 20) {
+//     prime = num - 1;
+//     while (prime > 1){
+//         if (num % prime == 0){
+//             num2++;
+//         }
+//         prime--;
+//     }
+//     if (num2==0){
+//         console.log(num);
+//     }
+//     num2 = 0;
+//     num++;
+// }
+
+
+
+//Bonus Logical #1
+
+// let num = 10;
+// let qcount = 0;
+// while(num > 4){
+//     qcount += 4;
+//     num--;
+// }
+
+// console.log("Nando received " + qcount + " quarters in return.");
+
+//Bonus Logical #2 - Needs to output: 10, 30, 50, 70, 90 20, 40, 60, 80 100
+
+let num = 10
+while (num <= 100) {
+  console.log(num)
+  num += 20
+  if (num === 90) {
+    console.log(num)
+    num = 20
+  }
+}
+
+//Bonus Logical #3
+// let num = 500
+// while (num <= 800) {
+//   if (num % 4 === 0) {
+//     console.log(num)
+//   }
+//   num++
+// }
