@@ -84,14 +84,14 @@
 
 //3.
 // function isCharAVowel(char) {
-//     if (char == "A" || char == "E" || char == "I" || char == "O" || char == "U" || char == "Y") {
+//     if (char.toUpperCase() == "A" || char.toUpperCase() == "E" || char.toUpperCase() == "I" || char.toUpperCase() == "O" || char.toUpperCase() == "U" || char.toUpperCase() == "Y") {
 //         return true;
 //     } else {
 //         return false;
 //     }
 // }
-// console.log (isCharAVowel("A"));
-// console.log (isCharAVowel("X"));
+// console.log (isCharAVowel("a"));
+// console.log (isCharAVowel("x"));
 
 //4.
 // const sumArray = function(...numbers) {
@@ -142,25 +142,27 @@
 // console.log(reverseString("Goodbye"));
 
 //8.
-// const longestStringInArray = function(...strings) {
-//     let stringL = "";
+const longestStringInArray = function (strings) {
+    let stringL = strings[0].length
+    for (let index = 0; index < strings.length; index++) {
+      if (strings[index].length > stringL) {
+        stringL = strings[index].length;
+      }
+    }
+  
+    return stringL;
+  }
+  
+  console.log( longestStringInArray(['The', 'Dallas','Cowboys']));
+
+//9.
+// function stringsLongerThan(strings, number) {
+//     let stringL = [];
 //     for (let index = 0; index < strings.length; index++) {
-//         if (strings[index].length > stringL.length) {
-//             stringL = strings[index];
+//         if (strings[index].length > number) {
+//             stringL.push(strings[index]);
 //         }
 //     }
 //     return stringL;
 // }
-// console.log(longestStringInArray("The", "Dallas", "Cowboys"));
-
-//9.
-function stringsLongerThan(strings, number) {
-    let stringL = [];
-    for (let index = 0; index < strings.length; index++) {
-        if (strings[index].length > number) {
-            stringL.push(strings[index]);
-        }
-    }
-    return stringL;
-}
-console.log(stringsLongerThan(["Say", "hello", "in", "the", "morning"], 3));
+// console.log(stringsLongerThan(["Say", "hello", "in", "the", "morning"], 3));
