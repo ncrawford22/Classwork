@@ -74,18 +74,59 @@
 
 //Nando's Cookies
 
-// let num = 10;
+// let paid = 10;
 // let qcount = 0;
-// while(num > 4){
+// while(paid > 4){
 //     qcount += 4;
-//     num--;
+//     paid--;
 // }
 
 // console.log("Nando received " + qcount + " quarters in return.");
 
-function changeReturned(cost, paid) {
-    return (paid - cost) * 4;
-}
-console.log("You received " + changeReturned(2, 4) + " quarters!");
+// function changeReturned(cost, paid) {
+//     return (paid - cost) * 4;
+// }
+// console.log("You received " + changeReturned(2, 4) + " quarters!");
 
- 
+function change(num, cost) {
+    num *= 100;
+    cost *= 100;
+    //rC stands for returned Change
+    let rC = [0,0,0,0,0,0,0,0,0];
+
+    while (num > cost) {
+        if (num >= cost + 5000) {
+            num-= 5000;
+            rC[0] ++;
+        } else if (num >= cost + 2000) {
+            num-= 2000;
+            rC[1] ++;
+        } else if (num >= cost + 1000) {
+            num-= 1000;
+            rC[2] ++;
+        } else if (num >= cost + 500) {
+            num-= 50;
+            rC[3] ++;
+        } else if (num >= cost + 100) {
+            num-= 100;
+            rC[4] ++;
+        } else if (num >= cost + 25) {
+            num-= 25;
+            rC[5] ++;
+        } else if (num >= cost + 10) {
+            num-= 10;
+            rC[6] ++;
+        } else if (num >= cost + 5) {
+            num-= 5;
+            rC[7] ++;
+        }  else if (num >= cost + 1) {
+            num--;
+            rC[8] ++;
+        }     
+    }
+    console.log(rC);
+    return ("You will get back " + rC[0] + " fifty dollar bills, " + rC[1] + 
+        " twenty dollar bills, " + rC[2] + " ten dollar bills, " + rC[3] + " five dollar bills, " 
+        + rC[4] + " one dollar bills, " + rC[5] + " quarters, " + rC[6] + " dimes, " + rC[7] + " nickels, and " + rC[8] + " pennies.");
+}
+console.log(change(100, 55));
