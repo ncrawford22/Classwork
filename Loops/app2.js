@@ -88,6 +88,9 @@
 // }
 // console.log("You received " + changeReturned(2, 4) + " quarters!");
 
+
+//Return change Exercise
+
 function change(num, cost) {
     num *= 100;
     cost *= 100;
