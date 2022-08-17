@@ -39,7 +39,7 @@ let radio = {
         let randomStation = Math.floor((Math.random() * 100)) % radio.stations.length;
         let randomSong = Math.floor((Math.random() * 100)) % radio.stations[0].songs.length;
         let randomBoth = radio.stations[randomStation].songs[randomSong];
-        console.log('Now Playing: ' + randomBoth.title + ' by ' + randomBoth.artist + '!');
+        console.log('Now Playing: ' + randomBoth.title + ' by ' + randomBoth.artist + ' on ' + radio.stations[randomStation].name + '!');
     }
 }
 
