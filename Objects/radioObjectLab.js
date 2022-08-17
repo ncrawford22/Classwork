@@ -1,7 +1,7 @@
 let radio = {
     stations: [
         {
-            name: 'Station 1',
+            name: 'WAMO 100.1',
             songs: [
                 {
                     title: 'Song 1',
@@ -18,7 +18,7 @@ let radio = {
             ]
         },
         {
-            name: 'Station 2',
+            name: 'WPGC 95.5',
             songs: [
                 {
                     title: 'Song 4',
@@ -36,10 +36,8 @@ let radio = {
         }
     ],
     changeStation: () => {
-        let randomStation = Math.floor((Math.random() * 100)) % 2;
-            console.log(randomStation);
-        let randomSong = Math.floor((Math.random() * 100)) % 3;
-            console.log(randomSong);
+        let randomStation = Math.floor((Math.random() * 100)) % radio.stations.length;
+        let randomSong = Math.floor((Math.random() * 100)) % radio.stations[0].songs.length;
         let randomBoth = radio.stations[randomStation].songs[randomSong];
         console.log('Now Playing: ' + randomBoth.title + ' by ' + randomBoth.artist + '!');
     }
