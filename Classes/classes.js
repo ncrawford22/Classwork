@@ -288,6 +288,62 @@
 
 // Hungry for More Exercise
 
-class BankAccount {
-    
-}
+// class BankAccount {
+//     constructor() {
+//         this.ownerName = ownerName;
+//         this.balance = balance;
+//         this.acctNum = Math.floor(Math.random() * 1000);
+//     }
+//     deposit(depositedAmount) {
+//         this.balance += depositedAmount;
+//         console.log('You deposited: ' + depositedAmount + '. ' + 'Your new balance is: ' + this.balance + '!');
+//     }
+//     withdraw(withdrawnAmount) {
+//         this.balance -= withdrawnAmount;
+//         console.log('You withdrew: ' + withdrawnAmount + '. ' + 'Your current balance after withdraw: ' + this.balance + '!');
+//     }
+// }
+// class CheckingAccount extends BankAccount {
+//     constructor(ownerName, balance, overdraftEnabled = true) {
+//       super(ownerName, balance) // calls the constructor from parent class (Bank Account)
+//       this.overdraftEnabled = overdraftEnabled;
+//     }
+//   ​
+//     withdraw(withdrawnAmount) { 
+//       if (withdrawnAmount > this.balance) {
+//   ​
+//         if (this.overdraftEnabled) {
+//   ​
+//           let overdraftFee = 20
+//           this.balance -= (withdrawnAmount + overdraftFee)
+//           console.log('this transaction overdrafts your balance :(')
+//   ​
+//         } else {
+//           console.log('you cannot withdraw more than you have')
+//         }
+//   ​
+//       } else {
+//         this.balance -= withdrawnAmount
+//         console.log('current balance after withdrawing ' + withdrawnAmount + " is: " + this.balance)
+//       }
+//     }
+//   }
+//   ​
+//   class SavingsAccount extends BankAccount {
+//     withdraw() {
+//       console.log('you cannot withdraw from this savings account :(')
+//     }
+//   }
+//   ​
+//   ​
+//   const lucas = new BankAccount('Lucas', 1000000)
+//   const usman = new CheckingAccount('Usman', 1000000)
+//   const stephin = new SavingsAccount('Stephin', 5)
+//   ​
+//   // console.log(lucas)
+//   // console.log(usman)
+//   // console.log(stephin)
+//   ​
+//   lucas.withdraw(1000)
+//   usman.withdraw(2000000)
+//   stephin.withdraw(4) 
