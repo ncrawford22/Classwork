@@ -54,3 +54,14 @@ function farmAnimal(animal){
     }
 }
 farmAnimal('dog');
+
+// E. Driver's Ed
+//1. 
+function canDrive(age) {
+    if (age >= 16) {
+        console.log('Here are the keys!');
+    } else if (age < 16) {
+        console.log("Sorry, you're too young.");
+    }
+}
+canDrive(12);
