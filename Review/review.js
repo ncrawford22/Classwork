@@ -43,3 +43,14 @@ console.log(e === 'Kevin');
 console.log(a + b === c);
 console.log(a * a === d);
 console.log(48 =='48');
+
+// D. The Farm
+//1.
+function farmAnimal(animal){
+    if (animal == 'cow'.toLowerCase) {
+        console.log('moooo');
+    }else {
+        console.log("Hey! You're not a cow.");
+    }
+}
+farmAnimal('dog');
