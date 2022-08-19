@@ -100,3 +100,29 @@ for (let index = 1; index <= 100; index++) {
         console.log(index);
     }
 }
+
+// C. Give me Five
+//1.
+for (let index = 0; index <= 100; index++) {
+    if(index % 5 === 0) {
+        console.log('I found a ' + index + ". High five!");
+    }
+}
+//2.
+for (let index = 0; index <= 100; index++) {
+    if(index % 5 === 0) {
+        console.log('I found a ' + index + '. High five!');
+    } else if(index % 3 === 0) {
+        console.log('I found a ' + index + '. Three is a crowd');
+    }
+}
+//3.
+for (let index = 0; index <= 100; index++) {
+    if (index % 5 === 0 && index % 3 ===0) {
+        console.log('I found a ' + index + '. High five! Three is a crowd');
+    } else if(index % 5 === 0) {
+        console.log('I found a ' + index + '. High five!');
+    } else if(index % 3 === 0) {
+        console.log('I found a ' + index + '. Three is a crowd!');
+    }
+}
