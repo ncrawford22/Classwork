@@ -82,3 +82,21 @@ for (let index = 10; index <= 400; index++) {
 for (let index = 12; index <= 4000; index += 3) {
     console.log(index);
 }
+
+// B. Get even
+//1.
+for (let index = 1; index <= 100; index++) {
+    if(index % 2 === 0) {
+        console.log(index);
+    } else {
+        console.log();
+    }
+}
+//2.
+for (let index = 1; index <= 100; index++) {
+    if(index % 2 === 0) {
+        console.log(index + " is an even number.");
+    } else {
+        console.log(index);
+    }
+}
