@@ -62,6 +62,23 @@ function canDrive(age) {
         console.log('Here are the keys!');
     } else if (age < 16) {
         console.log("Sorry, you're too young.");
+    } else {
+        console.log('You forgot to enter your age!');
     }
 }
 canDrive(12);
+
+// Loops
+// A. The Basics
+//1. 
+for (let index = 0; index <= 10; index++) {
+    console.log(index);
+}
+//2.
+for (let index = 10; index <= 400; index++) {
+    console.log(index);
+}
+//3.
+for (let index = 12; index <= 4000; index += 3) {
+    console.log(index);
+}
