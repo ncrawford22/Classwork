@@ -257,3 +257,71 @@
 // //8.
 // thomsCloset[1][2] = "Footie Pajamas"
 // console.log("Thom is looking fierce in a " + thomsCloset[0][0] + ", " + thomsCloset[1][2] + ", " + thomsCloset[2][0] + "!");
+
+// // Functions
+// // A. printGreeting .... skip
+
+// // B. printCool
+// const printCool = function(name) {
+//     console.log(name + " is cool");
+// }
+// printCool("Nate");
+
+// // C. calculateCube
+// function calculateCube(cubeNumber) {
+//     return Math.pow(cubeNumber, 3);
+// }
+// console.log(calculateCube(5));
+
+// // D. isVowel
+// const isVowel = (letter) => {
+//     const vowels = ["A", "E", "I", "O", "U"]
+//     if(vowels.includes(letter.toUpperCase())) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log(isVowel('o'));
+// console.log(isVowel('n'));
+
+// // E. getTwoLengths
+// const getTwoLengths = (string1, string2) => {
+//     let output = [];
+//     output.push(string1.length, string2.length);
+//     return output;
+// }
+// console.log(getTwoLengths("food", "drinks"));
+
+// // F. getMultipleLengths
+// const getMultipleLengths = (stringArray) => {
+//     let arrayLs = [];
+//     stringArray.forEach(word => arrayLs.push(word.length));
+//     return arrayLs;
+// }
+// console.log(getMultipleLengths(["cookie", "milk", "pepperoni", "fish", "tea"]));
+
+// // G. maxOfThree
+// function maxOfThree(num1, num2, num3) {
+//     if(num1 >= num2 && num1 >= num3){
+//         return num1
+//     } else if(num2 >= num3){
+//         return num2
+//     } else {
+//         return num3
+//     }
+
+// }
+// console.log(maxOfThree(22, 21, 22));
+
+// // H. printLongestWord
+// function printLongestWord(arrayString) {
+//     let lString = "";
+//     for (let index = 0; index < arrayString.length; index++) {
+//         if (arrayString[index].length > lString.length) {
+//             lString = arrayString[index];
+//         }
+//     }
+//     return lString;
+// }
+// console.log(printLongestWord(["soda", "pop", "carrot", "fights"]));
