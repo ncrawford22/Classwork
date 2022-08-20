@@ -259,6 +259,7 @@
 // console.log("Thom is looking fierce in a " + thomsCloset[0][0] + ", " + thomsCloset[1][2] + ", " + thomsCloset[2][0] + "!");
 
 // // Functions
+
 // // A. printGreeting .... skip
 
 // // B. printCool
@@ -325,3 +326,88 @@
 //     return lString;
 // }
 // console.log(printLongestWord(["soda", "pop", "carrot", "fights"]));
+
+// // Objects
+
+// // A. Make a user object
+// //1.
+// // const user = {
+
+// // }
+// //2.
+// const user = {
+//     name: "John Doe",
+//     email: "jdoe@gmail.com",
+//     age: 24,
+//     purchased: []
+// }
+
+// // B. Update the user
+// //1.
+// user.email = "DoeJohn@gmail.com";
+// //2.
+// user.age++;
+
+// // C. Adding keys and values
+// //1.
+// user.location = "234 West Avenue, Pittsburgh, PA";
+
+// // D. Shopaholic!
+// //1.
+// user.purchased.push("carbohydrates");
+// //2.
+// user.purchased.push("peace of mind");
+// //3.
+// user.purchased.push("Merino jodhpurs");
+// //4.
+// // console.log(user.purchased[2]);
+
+// // E. Object-within-object
+// //1.
+// user.friend = {
+//     name: "Nate",
+//     age: 32,
+//     location: "Fresno, CA",
+//     purchased: []
+// }
+// //2.
+// // console.log(user.friend.name);
+// //3.
+// // console.log(user.friend.location);
+// //4.
+// user.friend.age = 45;
+// //5.
+// user.friend.purchased.push("The One Ring");
+// //6.
+// user.friend.purchased.push("A latte");
+// //7.
+// // console.log(user.friend.purchased[1]);
+
+// // F. Loops
+// //1.
+// // user.purchased.forEach(item => console.log(item));
+// //2.
+// // user.friend.purchased.forEach(item => console.log(item));
+
+// // G. Functions can operate on objects
+// //1.
+// // const updateUser = () => {
+
+// // }
+// //2.
+// // const updateUser = () => {
+// //     user.age++;
+// // }
+// //3.
+// const updateUser = () => {
+//     user.age++;
+//     user.name.toUpperCase();
+// }
+// //4.
+// const oldAndLoud = (person) => {
+//     console.log(person)
+//     person.age++
+//     person.name.toUpperCase()
+//   }
+  
+//   oldAndLoud(user)
