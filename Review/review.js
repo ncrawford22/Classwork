@@ -69,6 +69,7 @@
 // canDrive(12);
 
 // // Loops
+
 // // A. The Basics
 // //1. 
 // for (let index = 0; index <= 10; index++) {
@@ -142,3 +143,117 @@
 // }
 
 // console.log(bank_account);
+
+// // Arrays & Control flow
+
+// // A. Talk About it:
+// // 1. indexes
+// // 2. Yes
+// // 3. A shopping list
+
+// // B. Easy Does it
+// //1.
+// // let quotes = ['Can We Eat?', 'Is it lunch time?', 'Can we eat dinner now?'];
+
+// // C. Accessing elements // const randomThings = [1, 10, "Hello", true]
+// //1. 
+// randomThings[0];
+// //2. 
+// randomThings[2] = "World";
+// //3.
+// console.log(randomThings);
+
+// // D. Change Values // const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"]
+// //1.
+// ourClass[2];
+// //2.
+// ourClass[4] = "Octocat";
+// //3.
+// ourClass.push("Cloud City");
+
+// // E. Mix It Up // const myArray = [5, 10, 500, 20]
+// //1.
+// myArray.push('Aegon', 'Food');
+// //2.
+// myArray.shift();
+// //3.
+// myArray.unshift('Bob Marley');
+// //4.
+// myArray.pop()
+// //5.
+// myArray.reverse()
+// // Yes, the array was mutated.
+// // Mutate means altering the original.
+// // Yes, it returned the array reversed.
+
+// // F. Biggie Smalls
+// //1.
+// let myInteger = 500;
+// if(myInteger < 100) {
+//     console.log("little number");
+// } else {
+//     console.log("big number");
+// }
+
+// // G. Monkey in the Middle
+// function monkey(myInteger){
+//     if(myInteger < 5) {
+//         console.log("little number");
+//     } else if(myInteger > 10) {
+//         console.log("big number");
+//     } else {
+//         console.log('Not my number!');
+//     }
+// }
+// monkey(4);
+// monkey(11);
+// monkey(8);
+
+// // H. What's in Your Closet
+// const kristynsCloset = [
+//     "left shoe",
+//     "cowboy boots",
+//     "right sock",
+//     "GA hoodie",
+//     "green pants",
+//     "yellow knit hat",
+//     "marshmallow peeps"
+// ];
+
+// // Thom's closet is more complicated. Check out this nested data structure!!
+// const thomsCloset = [
+//     [
+//         //shirts
+//     "grey button-up",
+//     "dark grey button-up",
+//     "light blue button-up",
+//     "blue button-up"
+//     ], [
+//         //pants
+//         "grey jeans",
+//         "jeans",
+//         "PJs"
+//     ], [
+//         //accessories
+//         "wool mittens",
+//         "wool scarf",
+//         "raybans"
+//     ]
+// ]
+// //1.
+// console.log("Kristyn is rocking that " + kristynsCloset[2] + " today!"); // right sock
+// //2. 
+// kristynsCloset.splice(6, 0, "raybans");
+// //3.
+// kristynsCloset[5] = "stained knit hat";
+// //4.
+// thomsCloset[0][0];
+// //5.
+// thomsCloset[1][2];
+// //6.
+// thomsCloset[2][0];
+// //7.
+// console.log("Thom is looking fierce in a " + thomsCloset[0][0] + ", " + thomsCloset[1][2] + ", " + thomsCloset[2][0] + "!");
+// //8.
+// thomsCloset[1][2] = "Footie Pajamas"
+// console.log("Thom is looking fierce in a " + thomsCloset[0][0] + ", " + thomsCloset[1][2] + ", " + thomsCloset[2][0] + "!");
