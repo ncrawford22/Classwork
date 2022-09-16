@@ -1,0 +1,33 @@
+body {
+    outline: 1px solid black;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    outline: 5px solid black;
+    height: 200px;
+    width: 33%;
+    background-color: grey;
+}
+
+
+/*   RESPONSIVENESS  */ 
+
+/*   MEDIA QUERIES  */
+
+/* min-width, min-height */
+@media screen and (max-width: 600px) {  
+    section {
+        background-color: aqua;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    section {
+        width: 100%;
+        background-color: orange;
+    }
+}

@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    background-color: white;
+    height: 100vh;
+    color: white;
+}
+#number1 {
+    border: 1px solid grey;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+}
+
+
+.item-1 {
+    background-color: red;
+    transition-property: background-color, width, transform;
+    transition-duration: 2s, s;
+    transition: all 0.4s ease-in-out;
+}
+
+.item-1:hover { 
+    width: 200px;
+}
+
+
+.item-2 {
+    background-color: blue;
+    transition-property: background-color, width, transform;
+    transition-duration: 2s, 5s;
+    transition: all 0.4s ease-in-out;
+}
+
+.item-2:hover { 
+    width: 250px;
+}
+
+.item-2:hover {
+    animation-name: gettingLonger;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
+    animation-direction:normal;
+}
+
+@keyframes gettingLonger {
+
+    from {
+        height: 50px;
+    }
+    to {
+        height: 250px;
+    }
+}

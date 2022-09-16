@@ -1,0 +1,31 @@
+body {
+    background-image: url("https://tesla-cdn.thron.com/delivery/public/image/tesla/03e533bf-8b1d-463f-9813-9a597aafb280/bvlatuR/std/4096x2560/M3-Homepage-Desktop-LHD")
+}
+
+.nav-products {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+
+div {
+  margin: 13px 10px;
+}
+
+nav-main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: right;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+logo img{
+    width: 150px
+}

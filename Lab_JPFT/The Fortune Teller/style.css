@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    background-color: white;
+    height: 100vh;
+    color: white;
+}
+#number1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100px;
+    height: 100px;
+    margin: 10rem;
+    position: relative;
+    transition: all 4s ease;
+}
+
+div {
+    transition: transform 2s ease-in-out;
+}
+
+h1 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 50%;
+    color: black;
+    transition-property: color;
+    transition-duration: 5s;
+    transition-delay: 4s;
+}
+.item {
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+}
+
+.item-23 {
+    background-color: red;
+    transition-property: transform;
+    transition: all 2s ease;
+}
+
+.item-23:hover { 
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+
+.item-24 {
+    background-color: yellow;
+    transition-property: transform;
+    transition: all 2s ease;
+}
+
+.item-24:hover { 
+    transform-origin: top right;
+  transform: rotate(-90deg);
+}
+
+.item-25 {
+    background-color: blue;
+    transition-property: transform;
+    transition: all 2s ease;
+}
+
+.item-25:hover { 
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+}
+
+.item-26 {
+    background-color: green;
+    transition-property: transform;
+    transition: all 2s ease;
+}
+
+.item-26:hover { 
+    transform-origin: bottom right;
+    transform: rotate(90deg);
+}
