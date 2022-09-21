@@ -6,6 +6,8 @@ const app = express();
 
 const port = 3000;
 
+const array = 
+
 //#1
 // app.get('/greeting', (req, res) => {
 //     res.send("Hello, stranger");
@@ -16,6 +18,11 @@ const port = 3000;
 //     res.send('Hello, ' + req.params.name);
 // })
 
+// Tip Calculator
+//#4
+app.get('/tip/:total/:tipPercentage', (req, res) => {
+    res.send("Tip calculated is: " + req.params.total * (req.params.tipPercentage / 100));
+})
 
 
 
