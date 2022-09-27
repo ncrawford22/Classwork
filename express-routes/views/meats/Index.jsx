@@ -1,18 +1,20 @@
 const React = require('react');
+const DefaultLayout = require('../layouts/DefaultLayout');
+
 
 class Index extends React.Component {
     render() {
 
         const { meats } = this.props;
         return (
-            <div>
+            <DefaultLayout title="All Meats" foodGroup="meats">
                 <h1> Meats Index Page</h1>
                 <ul>
-                    {meats.map((meat, i) => {
+                    {meats.map((meat) => {
                         return (
-                            <li key={i}>
-                                The <a href={`/meats/${i}`}>{meat.name}</a> is {meat.type}.
-                                <a href={`/meats/${i}/Edit`}> Edit</a>
+                            <li key={meat._id}>
+                                The <a href={`/meats/${meat._id}`}>{meat.name}</a> is {meat.type}.
+                                <a href={`/meats/${meat._id}/Edit`}> Edit</a>
                             </li>
                         )
                     })}
@@ -21,8 +23,7 @@ class Index extends React.Component {
                 <nav>
                     <a href="/meats/new">Create a new meat</a>
                 </nav>
-
-            </div>
+            </DefaultLayout>
         );
     }
 }

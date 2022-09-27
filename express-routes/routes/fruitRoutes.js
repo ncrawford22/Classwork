@@ -1,11 +1,17 @@
+// I.N.D.U.C.E.S
+// Index, New, Delete, Update, Create, Edit, Show
+
 // Load express
 const express = require('express');
 
-// Load our fruits data
-const fruits = require('../models/fruits')
-
 // Create a special router object for our routes
 const router = express.Router();
+
+// Load our fruits data
+// const fruits = require('../models/fruits')
+
+// Loading our Fruit model
+const Fruit = require('../models/fruit')
 
  // Setup our "root" route
 
@@ -16,33 +22,66 @@ const router = express.Router();
 // Setup "index" routes
 router.get('/', (req, res) => {
     // res.send(fruits);
-    res.render('fruits/Index', {fruits: fruits});
+    // res.render('fruits/Index', {fruits: fruits});
+
+    // Find takes two arguments
+    // 1. An object with our query (to filter our data and find exactly what we need)
+    // 2. Callback function (with an error object and the found data)
+    Fruit.find({}, (err, foundFruit) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).render('fruits/Index', {fruits: foundFruit})
+
+        }
+    })
 });
 
 // Setup "new" route
 router.get('/new', (req, res) => {
     // res.send('<form>Create fruit</form>');
-    res.render('fruits/New');
+    res.render('fruits/New')
 });
 
 // Setup "create" route
 router.post('/', (req, res) => {
     if (req.body.readyToEat === "on") {
-        req.body.readyToEat = true;
+        req.body.readyToEat = true
     } else {
-        req.body.readyToEat = false;
+        req.body.readyToEat = false
     }
-    fruits.push(req.body);
-    // console.log(fruits);
-    // res.send('Creating a fruit... (in the DB)');
-    res.redirect('/fruits');
-});
+
+    // Create has two arguments:
+    //   1st: the data we want to send
+    //   2nd: callback function 
+    Fruit.create(req.body, (err, createdFruit) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).redirect('/fruits')
+        }
+    })
+
+    // fruits.push(req.body)
+    // res.redirect('/fruits')
+})
 // ?name=apple&color=red&readyToEat=value
 
 // Setup "show" route
-router.get('/:index', (req, res) => {
+router.get('/:id', (req, res) => {
     // res.send(fruits[req.params.index]);
-    res.render('fruits/Show', {fruit: fruits[req.params.index]});
+    // res.render('fruits/Show', {fruit: fruits[req.params.index]});
+
+    // findById accepts two arguments:
+    // 1st: the id of the document in our database
+    // 2nd: Callback (with error object and found document)
+    Fruit.findById(req.params.id, (err, foundFruit) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).render('fruits/Show', {fruit: foundFruit});
+        }
+    });
 });
 
 // Setup "edit" route

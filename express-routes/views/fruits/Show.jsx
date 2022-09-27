@@ -1,5 +1,5 @@
 const React = require('react');
-const fruits = require('../../models/fruits');
+const DefaultLayout = require('../layouts/DefaultLayout');
 
 // Class Component
 class Show extends React.Component {
@@ -9,8 +9,9 @@ class Show extends React.Component {
 
         // Object Destructuring
         const { name, color, readyToEat } = this.props.fruit;
+
         return (
-            <div>
+            <DefaultLayout title={`${name} details`} foodGroup="fruits">
                 <h1> Show Page testing testing testing...</h1>
                 <p>
                     The {name} is {color}.
@@ -21,7 +22,7 @@ class Show extends React.Component {
                 <nav>
                     <a href="/fruits">Back</a>
                 </nav>
-            </div>
+            </DefaultLayout>
         );
     }
 }
