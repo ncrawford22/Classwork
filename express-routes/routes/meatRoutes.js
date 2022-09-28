@@ -1,59 +1,42 @@
+// I.N.D.U.C.E.S
+// Index, New, Delete, Update, Create, Edit, Show
+
 // Load express
 const express = require('express');
-
-// Load our meats data
-// const meats = require('../models/meats')
-const Meat = require('../models/meat')
-
 
 // Create a special router object for our routes
 const router = express.Router();
 
+// Bring in controller object (with methods attached)
+// const meatController = require('../controllers/meatController')
+// Example: router.get('/', meatController.findAllMeats)
+
+// Bring in controller functions (destructure method)
+const { findAllMeats, showNewView, deleteOneMeat, updateOneMeat, createNewMeat, showEditView, seedStarterData, showOneMeat } = require('../controllers/meatController')
+
 // Setup "index" routes
- router.get('/', (req, res) => {
-    // res.send(meats)
-    // res.render('meats/Index', {meats: meats});
-    Meat.find({}, (err, foundMeat) => {
-        if (err) {
-            res.status(400).json(err)
-        } else {
-            res.status(200).render('meats/Index', {meats: foundMeat})
+router.get('/', findAllMeats);
 
-        }
-    })
-});
+// Setup "new" route
+router.get('/new', showNewView);
 
-router.get('/new', (req, res) => {
-    // res.send('<form>Create meat</form>');
-    res.render('meats/New');
-});
+// Setup "destroy" route
+router.delete('/:id', deleteOneMeat);
 
-router.post('/', (req, res) => {
-    // meats.push(req.body);
-    // res.redirect('/meats');
-    Meat.create(req.body, (err, createdMeat) => {
-        if (err) {
-            res.status(400).json(err)
-        } else {
-            res.status(200).redirect('/meats')
-        }
-    })
-});
+// Setup "update" route
+router.put('/:id', updateOneMeat);
 
-router.get('/:id', (req, res) => {
-    // res.send(meats[req.params.index]);
-    // res.render('meats/Show', {meat: meats[req.params.index]});
-    Meat.findById(req.params.id, (err, foundMeat) => {
-        if (err) {
-            res.status(400).json(err)
-        } else {
-            res.status(200).render('meats/Show', {meat: foundMeat});
-        }
-    });
-})
+// Setup "create" route
+router.post('/', createNewMeat);
 
-router.get('/:index/edit', (req, res) => {
-    res.render('meats/Edit', {meat: meats[req.params.index]});
-});
+// Setup "edit" route
+router.get('/:id/Edit', showEditView);
+
+// Setup "seed" route
+router.get('/seed', seedStarterData);
+
+// Setup "show" route
+router.get('/:id', showOneMeat)
+
 
 module.exports = router;

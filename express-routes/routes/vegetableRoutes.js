@@ -1,60 +1,41 @@
+// I.N.D.U.C.E.S
+// Index, New, Delete, Update, Create, Edit, Show
+
 // Load express
 const express = require('express');
-
-// Load our vegetables data
-// const vegetables = require('../models/vegetables')
-const Vegetable = require('../models/vegetable')
-
 
 // Create a special router object for our routes
 const router = express.Router();
 
+// Bring in controller object (with methods attached)
+// const vegetableController = require('../controllers/vegetableController')
+// Example: router.get('/', vegetableController.findAllVegetables)
+
+// Bring in controller functions (destructure method)
+const { findAllVegetables, showNewView, deleteOneVegetable, updateOneVegetable, createNewVegetable, showEditView, seedStarterData, showOneVegetable } = require('../controllers/vegetableController')
+
 // Setup "index" routes
-router.get('/', (req, res) => {
-    // res.send(vegetables)
-    Vegetable.find({}, (err, foundVegetable) => {
-        if (err) {
-            res.status(400).json(err)
-        } else {
-            res.status(200).render('vegetables/Index', {vegetables: foundVegetable})
+router.get('/', findAllVegetables);
 
-        }
-    })
-});
+// Setup "new" route
+router.get('/new', showNewView);
 
-router.get('/New', (req, res) => {
-    // res.send('<form>Create vegetable</form>');
-    res.render('vegetables/New');
-});
+// Setup "destroy" route
+router.delete('/:id', deleteOneVegetable);
 
-router.post('/', (req, res) => {
-    // vegetables.push(req.body);
-    // res.redirect('/vegetables');
+// Setup "update" route
+router.put('/:id', updateOneVegetable);
 
-    Vegetable.create(req.body, (err, createdVegetable) => {
-        if (err) {
-            res.status(400).json(err)
-        } else {
-            res.status(200).redirect('/vegetables')
-        }
-    })
-});
+// Setup "create" route
+router.post('/', createNewVegetable);
 
-router.get('/:id', (req, res) => {
-    // res.send(vegetables[req.params.index]);
-    // res.render('vegetables/Show', {vegetable: vegetables[req.params.index]});
-    Vegetable.findById(req.params.id, (err, foundVegetable) => {
-        if (err) {
-            res.status(400).json(err)
-        } else {
-            res.status(200).render('vegetables/Show', {vegetable: foundVegetable});
-        }
-    });
+// Setup "edit" route
+router.get('/:id/Edit', showEditView);
 
-})
+// Setup "seed" route
+router.get('/seed', seedStarterData);
 
-router.get('/:index/Edit', (req, res) => {
-    res.render('vegetables/Edit', {vegtable: vegetables[req.params.index]});
-});
+// Setup "show" route
+router.get('/:id', showOneVegetable)
 
 module.exports = router;

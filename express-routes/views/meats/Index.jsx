@@ -14,7 +14,6 @@ class Index extends React.Component {
                         return (
                             <li key={meat._id}>
                                 The <a href={`/meats/${meat._id}`}>{meat.name}</a> is {meat.type}.
-                                <a href={`/meats/${meat._id}/Edit`}> Edit</a>
                             </li>
                         )
                     })}
