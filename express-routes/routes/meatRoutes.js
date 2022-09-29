@@ -12,7 +12,7 @@ const router = express.Router();
 // Example: router.get('/', meatController.findAllMeats)
 
 // Bring in controller functions (destructure method)
-const { findAllMeats, showNewView, deleteOneMeat, updateOneMeat, createNewMeat, showEditView, seedStarterData, showOneMeat } = require('../controllers/meatController')
+const { findAllMeats, showNewView, deleteOneMeat, updateOneMeat, createNewMeat, showEditView, seedStarterData, showOneMeat, clearData } = require('../controllers/meatController')
 
 // Setup "index" routes
 router.get('/', findAllMeats);
@@ -32,6 +32,8 @@ router.post('/', createNewMeat);
 // Setup "edit" route
 router.get('/:id/Edit', showEditView);
 
+// Setup "clear" route
+router.get('/clear', clearData)
 // Setup "seed" route
 router.get('/seed', seedStarterData);
 

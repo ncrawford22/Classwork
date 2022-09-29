@@ -138,6 +138,19 @@ const seedStarterData = (req, res) => {
     });
 }
 
+// ROUTE       GET /fruits/clear      (clear)
+const clearData = (req, res) => {
+    // Delete all remaining documents (if there are any)
+    Fruit.deleteMany({}, (err, deletedFruits) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            // Data has been successfully deleted
+                res.status(200).redirect('/fruits')
+            }
+    })
+}
+
 // Examples:
 // router.get('/', (req, res) => {
 //     const color = req.query.color;
@@ -181,5 +194,6 @@ module.exports = {
     seedStarterData,
     showEditView,
     updateOneFruit,
-    deleteOneFruit
+    deleteOneFruit,
+    clearData
 }

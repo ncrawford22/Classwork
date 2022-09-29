@@ -126,39 +126,18 @@ const seedStarterData = (req, res) => {
     });
 }
 
-// Examples:
-// router.get('/', (req, res) => {
-//     const color = req.query.color;
-//     const readyToEat = req.query.readyToEat == 'true' ? true : false;
-
-//     if (req.query.color || req.query.readyToEat) {
-//         const readyFilter = fruits.filter(fruit => fruit.readyToEat == readyToEat);
-//         const colorFilter = fruits.filter(fruit => fruit.color == color);
-//         if (req.query.color) {
-//             res.send(colorFilter)
-//         } else if (req.query.readyToEat) {
-//             res.send(readyFilter);
-//         } else {
-//             res.send("That fruit is not available!");
-//         }
-//     } else {
-//         res.send(fruits);
-//     }
-// })
-
-// router.get('/', (req, res) => {
-//     quality = req.query.quality
-//     if (quality == 'good'){
-//         yes = fruits.filter(fruit => fruit.readyToEat === true)
-//         res.send(yes)
-//     } else if (quality == 'bad'){
-//         no = fruits.filter(fruit => fruit.readyToEat === false)
-//         res.send(no)
-//     } else{
-//         res.send(fruits)
-//     }
-// })
-
+// ROUTE       GET /vegetables/clear      (clear)
+const clearData = (req, res) => {
+    // Delete all remaining documents (if there are any)
+    Vegetable.deleteMany({}, (err, deletedVegetables) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            // Data has been successfully deleted
+                res.status(200).redirect('/vegetables')
+            }
+    })
+}
 
 
 module.exports = {
@@ -169,5 +148,6 @@ module.exports = {
     seedStarterData,
     showEditView,
     updateOneVegetable,
-    deleteOneVegetable
+    deleteOneVegetable,
+    clearData
 }

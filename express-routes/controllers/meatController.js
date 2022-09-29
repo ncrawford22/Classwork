@@ -125,6 +125,19 @@ const seedStarterData = (req, res) => {
     });
 }
 
+// ROUTE       GET /meats/clear      (clear)
+const clearData = (req, res) => {
+    // Delete all remaining documents (if there are any)
+    Meat.deleteMany({}, (err, deletedMeats) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            // Data has been successfully deleted
+                res.status(200).redirect('/meats')
+            }
+    })
+}
+
 
 module.exports = {
     findAllMeats,
@@ -134,5 +147,6 @@ module.exports = {
     seedStarterData,
     showEditView,
     updateOneMeat,
-    deleteOneMeat
+    deleteOneMeat,
+    clearData
 }

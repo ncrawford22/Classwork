@@ -12,7 +12,7 @@ const router = express.Router();
 // Example: router.get('/', fruitController.findAllFruits)
 
 // Bring in controller functions (destructure method)
-const { findAllFruits, showNewView, createNewFruit, deleteOneFruit, updateOneFruit, showEditView, showOneFruit, seedStarterData } = require('../controllers/fruitController')
+const { findAllFruits, showNewView, createNewFruit, deleteOneFruit, updateOneFruit, showEditView, showOneFruit, seedStarterData, clearData } = require('../controllers/fruitController')
 
  // Setup our "root" route
 
@@ -38,8 +38,12 @@ router.post('/', createNewFruit);
 // Setup "edit" route
 router.get('/:id/Edit', showEditView);
 
+// Setup "clear" route
+router.get('/clear', clearData);
+
 // Setup "seed" route
 router.get('/seed', seedStarterData);
+
 // Setup "show" route
 router.get('/:id', showOneFruit)
 
